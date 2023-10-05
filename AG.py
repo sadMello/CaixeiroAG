@@ -1,3 +1,4 @@
+#%%
 import random
 import math
 import matplotlib.pyplot as plt
@@ -147,11 +148,14 @@ def desenharMapa(cidade, resposta):
 
 def main():
     # Valores iniciais
-    TAMANHO_POPULACAO = 2000
-    TAMANHO_SELECAO_TORNEIO = 4
-    TAXA_MUTACAO = 0.1
-    TAXA_CRUZAMENTO = 0.9
-    OBJETIVO = 450.0
+    print("Algoritmo Genético para o Problema do Caixeiro Viajante")
+    print("----------------------------------------------------------------")
+
+    TAMANHO_POPULACAO = int(input("Digite o tamanho da população: "))
+    TAMANHO_SELECAO_TORNEIO = int(input("Digite o tamanho da seleção do torneio: "))
+    TAXA_MUTACAO = float(input("Digite a taxa de mutação (ex: 0.1): "))
+    TAXA_CRUZAMENTO = float(input("Digite a taxa de cruzamento (ex: 0.9): "))
+    OBJETIVO = float(input("Digite a distância alvo: "))
 
     # Executar o algoritmo genético
     cidades = obterCidades()
@@ -170,3 +174,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# %%
